@@ -18,7 +18,7 @@ describe("store", () => {
     it("Should return an empty array when there's no data", async () => {
       restoreDb();
       const data = await getAll();
-      expect(data).toEqual([]);
+      expect(data).toEqual({}); // BREAK THE TEST FOR DEPLOY TESTING
     });
     it("Should return an array with one item when there is one item", async () => {
       const data = await getAll();
